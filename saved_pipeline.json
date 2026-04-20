@@ -1,0 +1,5 @@
+{
+  "drop_cols": [],
+  "null_strategy": "Auto",
+  "outlier_strategy": "Remove with IQR"
+}

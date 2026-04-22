@@ -49,9 +49,16 @@ if uploaded_file:
 
     df = load_file(uploaded_file)
 
-    if df is None or df.empty:
-        st.error("Could not load data properly.")
+    if df is None:
         st.stop()
+
+    if df.empty:
+        st.warning("⚠️ File loaded but contains no usable data")
+        st.stop()
+
+        if df is None or df.empty:
+            st.error("Could not load data properly.")
+            st.stop()
 
     # Step 1: preprocess
     df = preprocess_data(df)

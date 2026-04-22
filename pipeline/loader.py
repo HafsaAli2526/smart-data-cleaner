@@ -3,6 +3,11 @@ import streamlit as st
 import re
 
 
+import pandas as pd
+import streamlit as st
+import re
+
+
 def load_file(uploaded_file):
     file_name = uploaded_file.name.lower()
 
